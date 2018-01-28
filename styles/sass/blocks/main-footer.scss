@@ -1,0 +1,26 @@
+.main-footer {
+  display: none;
+}
+
+@include adaptive_tablet {
+  .main-footer {
+    display: block;
+    font-size: 12px;
+    background-color: $color_gray;
+  }
+  .main-footer__wrapper {
+    display: flex;
+    padding: 15px 12px;
+  }
+  .main-footer__copyright {
+    padding-left: 15px;
+    text-decoration: none;
+    color: $color_dark_gray;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      color: $color_dark_blue;
+    }
+  }
+}

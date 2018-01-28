@@ -1,0 +1,38 @@
+.footer-inside {
+  font-size: 12px;
+  background-color: $color_gray;
+}
+
+.footer-inside__wrapper {
+  padding: 15px 12px;
+}
+
+.footer-inside__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-inside__item {
+  &:not(:last-of-type) {
+    padding-right: 21px;
+  }
+}
+
+.footer-inside__action {
+  color: $color_dark_gray;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    color: $color_dark_blue;
+  }
+}
+
+@include adaptive_tablet {
+  .footer-inside {
+    border-bottom: 1px solid white;
+  }
+}

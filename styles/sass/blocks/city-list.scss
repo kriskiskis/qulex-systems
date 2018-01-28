@@ -1,0 +1,18 @@
+.city-list {
+  display: none;
+}
+
+@include adaptive_tablet {
+  .city-list {
+    display: block;
+    font-size: 14px;
+    color: $color_dark_gray;
+    background-color: $color_dark_blue;
+    border: none;
+    border-bottom: 1px dashed $color_dark_gray;
+    outline-color: $color_gray;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

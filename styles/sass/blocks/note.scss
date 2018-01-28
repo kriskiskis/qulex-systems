@@ -1,0 +1,94 @@
+.note {
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+  list-style: none;
+}
+
+.note__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  &:not(:first-of-type) {
+    padding-top: 27px;
+  }
+}
+.note__icon {
+  border-radius: 3px;
+}
+
+.note__content {
+  padding-left: 10px;
+}
+
+.note__user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note__user-wrapper {
+  display: flex;
+}
+
+.note__username {
+  align-self: center;
+  padding-right: 22px;
+  font-size: 12px;
+  color: $color_dark_gray;
+}
+
+.note__status {
+  padding: 5px 8px;
+  font-size: 14px;
+  color: $color_dark_gray;
+  background-color: $color_gray;
+}
+
+.note__extra {
+  align-self: center;
+}
+
+.note__comment,
+.note__time {
+  font-size: 12px;
+  text-decoration: none;
+  color: $color_dark_gray;
+}
+
+.note__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: $color_blue;
+}
+
+.note__text {
+  margin: 0;
+  font-size: 14px;
+}
+
+.note__tags {
+  font-size: 14px;
+  color: $color_dark_gray;
+}
+
+@include adaptive_tablet {
+  .note__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .note__status {
+    padding: 5px 16px;
+    border-radius: 3px;
+  }
+
+  .note__comment {
+    display: none;
+  }
+}
+
+@include adaptive_desktop {
+  .note__comment {
+    display: inline-block;
+  }
+}

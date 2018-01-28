@@ -1,0 +1,33 @@
+.add__title {
+  display: none;
+}
+
+.add__icon {
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    path {
+      fill: $color_dark_blue;
+    }
+  }
+}
+
+@include adaptive_tablet {
+  .add__icon {
+    text-decoration: none;
+    > svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .add__title {
+    display: inline-block;
+    font-family: 'Georgia', sans-serif;
+    font-size: 14px;
+    color: $color_dark_gray;
+    &:active {
+      color: $color_dark_blue;
+    }
+  }
+}

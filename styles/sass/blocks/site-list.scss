@@ -1,0 +1,38 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  background-color: $color_gray_nav;
+}
+
+.site-list__info {
+  display: block;
+  padding: 10px 0;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+@include adaptive_tablet {
+  .site-list {
+    flex-wrap: wrap;
+  }
+  .site-list__info {
+    padding-right: 10px;
+    margin-right: 14px;
+  }
+
+  .site-list__info--active {
+    padding-top: 5px;
+    border-top: 5px solid white;
+  }
+}
+
+@include adaptive_desktop {
+  .site-list {
+    width: $desktop__width;
+    margin: 0 auto;
+  }
+}

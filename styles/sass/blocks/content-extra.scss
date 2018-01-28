@@ -1,0 +1,44 @@
+.content-extra {
+  display: none;
+}
+
+@include adaptive_tablet {
+  .content-extra {
+    display: block;
+    position: absolute;
+    width: 170px;
+    min-height: 100%;
+    z-index: 810;
+    background-color: $color_gray_light;
+    border-right: 1px solid $color_dark_gray;
+  }
+
+  .content-extra__subtitle {
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 29px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .content-extra__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .content-extra__link {
+    padding: 7px 0;
+      display: block;
+      padding-left: 29px;
+      font-size: 14px;
+      text-decoration: none;
+      color: $color_dark_gray;
+  }
+}
+
+.content-extra__link--active {
+  border-left: 5px solid $color_dark_gray;
+  padding-left: 24px;
+  color: black;
+}

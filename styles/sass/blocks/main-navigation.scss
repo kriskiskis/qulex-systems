@@ -1,0 +1,93 @@
+.main-navigation__list {
+  display: none;
+}
+
+.main-navigation--opened {
+  > .main-navigation__list {
+    display: flex;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.main-navigation__button {
+  display: block;
+  width: 22px;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  @include adaptive_desktop {
+    display: none;
+  }
+  @include adaptive_tablet {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__button::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 11px;
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+
+.main-navigation--closed .main-navigation__button:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+.main-navigation--opened .main-navigation__button {
+  top: 0;
+  right: 0;
+  left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 6px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@include adaptive_tablet {
+  .main-navigation {
+    width: 100%;
+    background-color: $color_gray_nav;
+  }
+
+  .main-navigation__list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 22px;
+  }
+}
+
+@include adaptive_desktop {
+  .main-navigation__list {
+    padding-left: 0;
+  }
+}

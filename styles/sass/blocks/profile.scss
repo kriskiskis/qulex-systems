@@ -1,0 +1,25 @@
+.profile {
+  padding-left: 33px;
+}
+
+.profile__user-photo {
+  border-radius: 3px;
+}
+
+.profile__user-name {
+  display: none;
+}
+
+@include adaptive_tablet {
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile__user-name {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 14px;
+    color: $color_dark_gray;
+  }
+}

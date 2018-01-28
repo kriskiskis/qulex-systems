@@ -1,0 +1,32 @@
+.content-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-main__title {
+  margin: 0 15px;
+  font-size: 30px;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background-color: white;
+}
+
+@include adaptive_tablet {
+  .content-main {
+    margin-left: 171px;
+  }
+}
+
+@include adaptive_tablet {
+  .content-main__title {
+    margin: 0;
+    padding-left: 29px;
+    padding-top: 30px;
+    padding-bottom: 22px;
+    font-size: 36px;
+    text-align: left;
+    > p {
+      margin: 0;
+    }
+  }
+}
